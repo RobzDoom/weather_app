@@ -11,8 +11,6 @@ export function fetchWeather(city){
     const url = `${ROOT_URL}&q=${city},us`;
     const request = axios.get(url); //This is what is going to make the AJAX call. THis returns a promise. 
 
-    console.log("Request in Action Creator is", request);
-
     return {
         type: FETCH_WEATHER,
         payload: request
